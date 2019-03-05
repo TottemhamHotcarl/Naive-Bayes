@@ -24,7 +24,7 @@ for i in range(n):
 #print(M)
 
 
-path2 = "/files1b/1606558/Desktop/Machine Learning/Naive Bayes/whole_data.txt"
+path2 = "/files1b/1606558/Desktop/Machine Learning/Naive Bayes/reviews.txt"
 
 file_object2  = open(path2, 'r')
 b = file_object2.readline()
@@ -66,8 +66,9 @@ for i in range(n):
 	for t in u:
 		table[i][t] = table[i][t]/total
 with open(pathwrite, 'w') as f:
-    f.write("%s\n" % [number_of_postive/total_unit,number_of_negative/total_unit])
+   
     for item in table:
+        f.write("%s\n" % [number_of_postive/total_unit,number_of_negative/total_unit])
         if item[0] != "1" and item[0] != "-1":
             f.write("%s\n" % item)
 #print(table)
